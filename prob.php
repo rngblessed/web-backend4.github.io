@@ -10,7 +10,7 @@ $db = new PDO(
 );
 
 try {
-    $stmt = $db->prepare("INSERT INTO programming_languages (language_name) VALUES (:language_name)");
+    $stmt = $db->prepare("INSERT INTO user_languages (language_name) VALUES (:language_name)");
     $lange = $_POST['lange'];
 
     $kl = implode($Languages);
