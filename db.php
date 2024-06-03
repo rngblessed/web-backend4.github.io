@@ -140,7 +140,7 @@ try {
             setcookie('checkt_error', '', 100000);
         }
 
-        $stmt = $db->prepare("INSERT INTO main (full_name, phone,email,birth_date,gender,bio,contract_agreed) VALUES (:full_name, :phone,:email,:birth_date,:gender,:bio,:contract_agreed)");
+        $stmt = $db->prepare("INSERT INTO main (Name, phone,email,birth_date,gender,bio,contract_agreed) VALUES (:Name, :phone,:email,:birth_date,:gender,:bio,:contract_agreed)");
         $login = $_POST['fio'];
         $email = $_POST['email'];
         $tel = $_POST['tel'];
