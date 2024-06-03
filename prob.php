@@ -1,16 +1,16 @@
 <?PHP
 
-$user = 'u67323';
-$pass = '3649631';
+$user = 'u67307';
+$pass = '2532509';
 $db = new PDO(
-    'mysql:host=localhost;dbname=u67323',
+    'mysql:host=localhost;dbname=u67307',
     $user,
     $pass,
     [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
 );
 
 try {
-    $stmt = $db->prepare("INSERT INTO user_languages (language_name) VALUES (:language_name)");
+    $stmt = $db->prepare("INSERT INTO programming_languages (language_name) VALUES (:language_name)");
     $lange = $_POST['lange'];
 
     $kl = implode($Languages);
