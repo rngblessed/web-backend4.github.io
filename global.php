@@ -154,7 +154,7 @@ try {
             setcookie('language_error', '', 100000);
         }
 
-        $stmt = $global->prepare("INSERT INTO osnova (Name, phone,email,birth_date,gender,Biographi,contract_agreed) VALUES (:Name, :phone,:email,:birth_date,:gender,:Biographi,:contract_agreed)");
+        $stmt = $global->prepare("INSERT INTO main (Name, phone,email,birth_date,gender,Biographi,contract_agreed) VALUES (:Name, :phone,:email,:birth_date,:gender,:Biographi,:contract_agreed)");
         $login = $_POST['fio'];
         $email = $_POST['email'];
         $tel = $_POST['tel'];
@@ -173,7 +173,7 @@ try {
         $user_id = $global->lastInsertId();
         $Languages = $_POST['language'];
         foreach ($Languages as $language_name) {
-            $stmt = $global->prepare("INSERT INTO osnova_languages (user_id, language_name) VALUES (:user_id,:language_name)");
+            $stmt = $global->prepare("INSERT INTO main_languages (user_id, language_name) VALUES (:user_id,:language_name)");
             $stmt->bindParam(':user_id', $user_id);
             $stmt->bindParam(':language_name', $language_name);
             $stmt->execute();
