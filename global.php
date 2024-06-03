@@ -173,7 +173,7 @@ try {
         $user_id = $global->lastInsertId();
         $Languages = $_POST['language'];
         foreach ($Languages as $language_name) {
-            $stmt = $global->prepare("INSERT INTO main_languages (user_id, language_name) VALUES (:user_id,:language_name)");
+            $stmt = $global->prepare("INSERT INTO user_languages (user_id, language_name) VALUES (:user_id,:language_name)");
             $stmt->bindParam(':user_id', $user_id);
             $stmt->bindParam(':language_name', $language_name);
             $stmt->execute();
